@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="svc_type">flow</value>
+  <value name="svc_subtype">default</value>
+  <value name="svc_sigtype">java 3.5</value>
+  <record name="svc_sig" javaclass="com.wm.util.Values">
+    <record name="sig_in" javaclass="com.wm.util.Values">
+      <value name="node_type">record</value>
+      <value name="node_comment"></value>
+      <value name="is_public">false</value>
+      <value name="field_type">record</value>
+      <value name="field_dim">0</value>
+      <value name="nillable">true</value>
+      <value name="form_qualified">false</value>
+      <value name="is_global">false</value>
+      <array name="rec_fields" type="record" depth="1">
+      </array>
+      <value name="modifiable">true</value>
+    </record>
+    <record name="sig_out" javaclass="com.wm.util.Values">
+      <value name="node_type">record</value>
+      <value name="node_comment"></value>
+      <value name="is_public">false</value>
+      <value name="field_type">record</value>
+      <value name="field_dim">0</value>
+      <value name="nillable">true</value>
+      <value name="form_qualified">false</value>
+      <value name="is_global">false</value>
+      <array name="rec_fields" type="record" depth="1">
+      </array>
+      <value name="modifiable">true</value>
+    </record>
+  </record>
+  <value name="node_comment">Flow service that sets basic parameters such as the name of the log4j properties file 
+and calls logConfig java service to configure logging behavior
+
+Property files provided:
+1.  log4j.consoleappender.properties - write log messages to server console
+2.  log4j.rollingfileappender.properties - write log msgs to rolling log file
+3.  log4j.LF5appender.properties - write log messages to LogFactor5 swing console
+4.  log4j.socketappender.properites - write log msgs to remote server running
+    org.apache.log4j.net.SocketServer (see usage below)     
+5.  log4j.fourappenders.properties - write log messages to four appenders at once
+
+See http://jakarta.apache.org/log4j for more details on log4j and to download 
+the latest version
+
+DEPENDENCIES:
+1.  log4j.jar (or equivalent) must be in the Server's class path.  
+    I like to put mine in &lt;serverroot&gt;\packages\logging\code\jars
+2.  A valid log4j.properties file location must be provided.  If not, the log4j
+    BasicConfigurator will be used.
+3.  xerces.jar (or equivalent) must be in the Server's class path or \logging\code\jars
+    folder, if you want to use the LogFactor5 (LF5) swing logging console addon
+4.  The SocketAppender requires that the remote logging server be running the 
+    log4j SocketServer. (see log4j javadocs for SocketAppender / SocketServer)
+
+      Usage: java org.apache.log4j.net.SocketServer port configFile configDir
+      where port is a part number where the server listens,
+      configFile is a configuration file fed to the PropertyConfigurator and
+      configDir is a path to a directory containing configuration files, possibly one for each client host.
+
+In order to test drive the log4j SocketAppender functionality, you will need to edit the 
+log4j.socketappender.properties file found in the pub folder to specify the hostname and 
+port number that your SocketServer will be listening on.  To start the log4j SocketServer, 
+you can edit the path names in either the socketserver.bat or socketserver.sh file 
+located in the \logging\pub folder.  The SocketServer reads a properties file to determine
+what to do with logging events it receives.  A sample file that launches LogFactor5 on the
+remote server is included in the \logging\pub folder.  You need to copy that file to the
+path specified in the remote servers socketserver.sh or socketserver.bat file.
+</value>
+  <value name="stateless">no</value>
+  <value name="caching">no</value>
+  <value name="prefetch">no</value>
+  <value name="cache_ttl">15</value>
+  <value name="prefetch_level">1</value>
+  <value name="template">PACI_LogHandler_Init_logStartup</value>
+  <value name="template_type">html</value>
+  <value name="audit_level">off</value>
+  <value name="check_internal_acls">no</value>
+  <value name="icontext_policy">$null</value>
+  <value name="system_service">no</value>
+  <value name="retry_max">0</value>
+  <value name="retry_interval">0</value>
+  <value name="svc_in_validator_options">none</value>
+  <value name="svc_out_validator_options">none</value>
+  <value name="auditoption">2</value>
+  <null name="auditfields_input"/>
+  <null name="auditfields_output"/>
+  <record name="auditsettings" javaclass="com.wm.util.Values">
+    <value name="document_data">0</value>
+    <value name="startExecution">true</value>
+    <value name="stopExecution">true</value>
+    <value name="onError">true</value>
+  </record>
+  <value name="pipeline_option">1</value>
+  <null name="originURI"/>
+  <value name="modifiable">true</value>
+  <value name="is_public">false</value>
+</Values>

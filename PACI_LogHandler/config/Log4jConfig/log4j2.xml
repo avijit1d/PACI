@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?><Configuration monitorInterval="30">
+		<Properties>
+      		 	   <Property name="LOG_PATTERN">%d %-5p - %m%n</Property>
+      			   <Property name="BASE_FILE_PATH">C:\\PACILog\\Log</Property>
+   		 </Properties>
+
+	<Appenders>
+		<RollingFile fileName="${BASE_FILE_PATH}\\PACI_DEFAULT\\PACI_DEFAULT.log" filePattern="${BASE_FILE_PATH}\\PACI_DEFAULT\\PACI_DEFAULT.log.%d{yyyyMMdd}" name="PACI_DEFAULT">
+			<PatternLayout>
+				<pattern>%d %-5p - %m%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingFile>
+		<RollingFile fileName="${BASE_FILE_PATH}\\I-EMPL-001\\I-EMPL-001.log" filePattern="${BASE_FILE_PATH}\\I-EMPL-001\\I-EMPL-001.log.%d{yyyyMMdd}" name="I-EMPL-001">
+			<PatternLayout>
+				<pattern>%d %-5p - %m%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingFile>
+		<RollingFile fileName="${BASE_FILE_PATH}\\I-EMPL-002\\I-EMPL-002.log" filePattern="${BASE_FILE_PATH}\\I-EMPL-002\\I-EMPL-002.log.%d{yyyyMMdd}" name="I-EMPL-002">
+			<PatternLayout>
+				<pattern>%d %-5p - %m%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingFile>
+		<RollingFile fileName="${BASE_FILE_PATH}\\I-CARD-001\\I-CARD-001.log" filePattern="${BASE_FILE_PATH}\\I-CARD-001\\I-CARD-001.log.%d{yyyyMMdd}" name="I-CARD-001">
+			<PatternLayout>
+				<pattern>%d %-5p - %m%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingFile>
+		<RollingFile fileName="${BASE_FILE_PATH}\\I-CARD-002A\\I-CARD-002A.log" filePattern="${BASE_FILE_PATH}\\I-CARD-002A\\I-CARD-002A.log.%d{yyyyMMdd}" name="I-CARD-002A">
+			<PatternLayout>
+				<pattern>%d %-5p - %m%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingFile>
+		<RollingFile fileName="${BASE_FILE_PATH}\\I-CARD-002B\\I-CARD-002B.log" filePattern="${BASE_FILE_PATH}\\I-CARD-002B\\I-CARD-002B.log.%d{yyyyMMdd}" name="I-CARD-002B">
+			<PatternLayout>
+				<pattern>%d %-5p - %m%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingFile>
+		<RollingFile fileName="${BASE_FILE_PATH}\\I-CARD-003\\I-CARD-003.log" filePattern="${BASE_FILE_PATH}\\I-CARD-003\\I-CARD-003.log.%d{yyyyMMdd}" name="I-CARD-003">
+			<PatternLayout>
+				<pattern>%d %-5p - %m%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingFile>
+		<RollingFile fileName="${BASE_FILE_PATH}\\I-CVID-001\\I-CVID-001.log" filePattern="${BASE_FILE_PATH}\\I-CVID-001\\I-CVID-001.log.%d{yyyyMMdd}" name="I-CVID-001">
+			<PatternLayout>
+				<pattern>%d %-5p - %m%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingFile>
+		<RollingFile fileName="${BASE_FILE_PATH}\\I-CVID-002\\I-CVID-002.log" filePattern="${BASE_FILE_PATH}\\I-CVID-002\\I-CVID-002.log.%d{yyyyMMdd}" name="I-CVID-002">
+			<PatternLayout>
+				<pattern>%d %-5p - %m%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingFile>
+		<RollingFile fileName="${BASE_FILE_PATH}\\I-CVID-003\\I-CVID-003.log" filePattern="${BASE_FILE_PATH}\\I-CVID-003\\I-CVID-003.log.%d{yyyyMMdd}" name="I-CVID-003">
+			<PatternLayout>
+				<pattern>%d %-5p - %m%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingFile>
+		<RollingFile fileName="${BASE_FILE_PATH}\\getUnitOwner\\getUnitOwner.log" filePattern="${BASE_FILE_PATH}\\getUnitOwner\\getUnitOwner.log.%d{yyyyMMdd}" name="getUnitOwner">
+			<PatternLayout>
+				<pattern>%d %-5p - %m%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingFile>
+		<RollingFile fileName="${BASE_FILE_PATH}\\getOwnerUnits\\getOwnerUnits.log" filePattern="${BASE_FILE_PATH}\\getOwnerUnits\\getOwnerUnits.log.%d{yyyyMMdd}" name="getOwnerUnits">
+			<PatternLayout>
+				<pattern>%d %-5p - %m%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingFile>
+		<RollingFile fileName="${BASE_FILE_PATH}\\updateOwnerUnit\\updateOwnerUnit.log" filePattern="${BASE_FILE_PATH}\\updateOwnerUnit\\updateOwnerUnit.log.%d{yyyyMMdd}" name="updateOwnerUnit">
+			<PatternLayout>
+				<pattern>%d %-5p - %m%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingFile>
+		<RollingFile fileName="${BASE_FILE_PATH}\\E_RESIDENCY\\E_RESIDENCY.log" filePattern="${BASE_FILE_PATH}\\E_RESIDENCY\\E_RESIDENCY.log.%d{yyyyMMdd}" name="E_RESIDENCY">
+			<PatternLayout>
+				<pattern>%d %-5p - %m%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingFile>
+		<RollingFile fileName="${BASE_FILE_PATH}\\SyncMOIData\\SyncMOIData.log" filePattern="${BASE_FILE_PATH}\\SyncMOIData\\SyncMOIData.log.%d{yyyyMMdd}" name="SyncMOIData">
+			<PatternLayout>
+				<pattern>%d %-5p - %m%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingFile>
+		 <Null name="Null"/>
+	</Appenders>
+
+	<Loggers>		
+		<Logger additivity="false" level="Info" name="PACI_DEFAULT"> 
+				<AppenderRef ref="PACI_DEFAULT"/>
+		</Logger>
+		<Logger additivity="false" level="Info" name="I-EMPL-001">
+				<AppenderRef ref="I-EMPL-001"/>
+		</Logger>
+		<Logger additivity="false" level="Info" name="I-EMPL-002">
+				<AppenderRef ref="I-EMPL-002"/>
+		</Logger>
+		<Logger additivity="false" level="Info" name="I-CARD-001">
+				<AppenderRef ref="I-CARD-001"/>
+		</Logger>
+		<Logger additivity="false" level="Info" name="I-CARD-002A"> 
+				<AppenderRef ref="I-CARD-002A"/>
+		</Logger>
+		<Logger additivity="false" level="Info" name="I-CARD-002B"> 
+				<AppenderRef ref="I-CARD-002B"/>
+		</Logger>
+		<Logger additivity="false" level="Info" name="I-CARD-003"> 
+				<AppenderRef ref="I-CARD-003"/>
+		</Logger>
+		<Logger additivity="false" level="Info" name="I-CVID-001"> 
+				<AppenderRef ref="I-CVID-001"/>
+		</Logger>
+		<Logger additivity="false" level="Info" name="I-CVID-002"> 
+				<AppenderRef ref="I-CVID-002"/>
+		</Logger>
+		<Logger additivity="false" level="Info" name="I-CVID-003"> 
+				<AppenderRef ref="I-CVID-003"/>
+		</Logger>
+		<Logger additivity="false" level="Info" name="getUnitOwner"> 
+				<AppenderRef ref="getUnitOwner"/>
+		</Logger>
+		<Logger additivity="false" level="Info" name="getOwnerUnits"> 
+				<AppenderRef ref="getOwnerUnits"/>
+		</Logger>
+		<Logger additivity="false" level="Info" name="updateOwnerUnit"> 
+				<AppenderRef ref="updateOwnerUnit"/>
+		</Logger>
+		<Logger additivity="false" level="Info" name="E_RESIDENCY"> 
+				<AppenderRef ref="E_RESIDENCY"/>
+		</Logger>
+		<Logger additivity="false" level="Info" name="SyncMOIData"> 
+				<AppenderRef ref="SyncMOIData"/>
+		</Logger>
+			
+	</Loggers>
+</Configuration>
