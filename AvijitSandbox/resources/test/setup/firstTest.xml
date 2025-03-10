@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webMethodsTestSuite description="" name="AddInt">
+    <webMethodsTestCase mocksEnabled="false" name="addint">
+        <service folder="AvijitSandbox.services" name="addInt">
+            <input>
+                <file filename="resources/test/data/AddInt/AvijitSandbox_services_addInt_input.xml"/>
+            </input>
+            <expected>
+                <file filename="resources/test/data/AddInt/AvijitSandbox_services_addInt_output.xml"/>
+            </expected>
+        </service>
+    </webMethodsTestCase>
+</webMethodsTestSuite>
