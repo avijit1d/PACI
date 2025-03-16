@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="shared">CnByaXZhdGUgc3RhdGljIExvZ2dlckNvbnRleHQgbG9nQ3R4ICA9IG51bGw7CnByaXZhdGUgc3Rh
+dGljIGZpbmFsIFN0cmluZyBQQUNLQUdFX05BTUUgPSAiUEFDSV9Mb2dIYW5kbGVyIjsKLy9wcml2
+YXRlIHN0YXRpYyBmaW5hbCBTdHJpbmcgTE9HNEpfQ0ZHID0gIi4vcGFja2FnZXMvIiArIFBBQ0tB
+R0VfTkFNRSArICIvY29uZmlnL0xvZzRqQ29uZmlnL2xvZzRqMi54bWwiOwpwcml2YXRlIHN0YXRp
+YyBmaW5hbCBTdHJpbmcgTE9HNEpfQ0ZHID0iQzpcXFNvZnR3YXJlQUdcXEludGVncmF0aW9uU2Vy
+dmVyXFxpbnN0YW5jZXNcXGRlZmF1bHRcXHBhY2thZ2VzXFxQQUNJX0xvZ0hhbmRsZXJcXGNvbmZp
+Z1xcTG9nNGpDb25maWdcXGxvZzRqMi54bWwiOw==</value>
+  <value name="encodeutf8">true</value>
+  <value name="extends"></value>
+  <array name="implements" type="value" depth="1">
+  </array>
+  <array name="imports" type="value" depth="1">
+    <value>java.io.File</value>
+    <value>java.io.FileInputStream</value>
+    <value>java.io.FileNotFoundException</value>
+    <value>java.io.IOException</value>
+    <value>org.apache.logging.log4j.Level</value>
+    <value>org.apache.logging.log4j.Logger</value>
+    <value>org.apache.logging.log4j.core.LoggerContext</value>
+    <value>org.apache.logging.log4j.core.config.Configuration</value>
+    <value>org.apache.logging.log4j.core.config.ConfigurationFactory</value>
+    <value>org.apache.logging.log4j.core.config.ConfigurationSource</value>
+    <value>org.apache.logging.log4j.core.config.xml.XmlConfigurationFactory</value>
+  </array>
+</Values>

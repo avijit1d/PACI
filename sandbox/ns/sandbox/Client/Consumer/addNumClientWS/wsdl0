@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="addNumWSD" targetNamespace="http://ITMOD-DEV-1.paci.kw/WS.Provider:addNumWSD" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soapjms="http://www.w3.org/2010/soapjms/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://ITMOD-DEV-1.paci.kw/WS.Provider:addNumWSD" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://ITMOD-DEV-1.paci.kw/WS.Provider:addNumWSD" xmlns:tns="http://ITMOD-DEV-1.paci.kw/WS.Provider:addNumWSD" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+          <xsd:element name="addNum" type="tns:addNum"/>
+          <xsd:element name="addNumResponse" type="tns:addNumResponse"/>
+          <xsd:complexType name="addNum">
+            <xsd:sequence>
+              <xsd:element name="num1" nillable="true" type="xsd:string"/>
+              <xsd:element name="num2" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="addNumResponse">
+            <xsd:sequence>
+              <xsd:element name="Result" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        	</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="addNumWSD_PortType_addNum">
+    <wsdl:part name="parameters" element="tns:addNum">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addNumWSD_PortType_addNumResponse">
+    <wsdl:part name="parameters" element="tns:addNumResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="addNumWSD_PortType">
+    <wsdl:operation name="addNum">
+      <wsdl:input message="tns:addNumWSD_PortType_addNum">
+    </wsdl:input>
+      <wsdl:output message="tns:addNumWSD_PortType_addNumResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_Provider_addNumWSD_Binder" type="tns:addNumWSD_PortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="addNum">
+      <soap:operation soapAction="WS_Provider_addNumWSD_Binder_addNum" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS.Provider.addNumWSD">
+    <wsdl:port name="WS_Provider_addNumWSD_Port" binding="tns:WS_Provider_addNumWSD_Binder">
+      <soap:address location="http://itmod-dev-1:5522/ws/WS.Provider:addNumWSD/WS_Provider_addNumWSD_Port"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
